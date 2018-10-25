@@ -1,0 +1,47 @@
+INSERT TABLE inputsteps 
+SELECT id,CASE WHEN id=1 THEN 'florida' ELSE name END AS name, status,sequencenumber,createddate,modifieddate 
+FROM inputsteps where id
+INSERT INTO TABLE inputsteps 
+VALUES (2,'sd','Running',3 ,1482883792000,1482883796030)
+
+UPDATE product SET name='sdad' WHERE productid =1
+select * from rty
+set hive.auto.convert.join.noconditionaltask.size = 10000000
+set hive.support.concurrency=true;
+set hive.enforce.bucketing=true;
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.txn.manager=org.apache.hadoop.hive.ql.lockmgr.DbTxnManager;
+set hive.compactor.initiator.on=true;
+set hive.compactor.worker.threads=2;
+
+set hive.auto.convert.join.noconditionaltask.size = 10000000;
+set hive.support.concurrency = true;
+set hive.enforce.bucketing = true;
+set hive.exec.dynamic.partition.mode = nonstrict;
+set hive.txn.manager = org.apache.hadoop.hive.ql.lockmgr.DbTxnManager;
+set hive.compactor.initiator.on = true;
+set hive.compactor.worker.threads = 1 ;
+
+create table rty(loanid string,Customerid string,LoanStatus string,CurrentLoanAmount double,Term string,CreditScore double,Yearsincurrentjob string,HomeOwnership string,AnnualIncome double,Purpose string,MonthlyDebt double,YearsofCreditHistory double,Monthssincelastdelinquent string,NumberofOpenAccounts double,NumberofCreditProblems double,CurrentCreditBalance double,MaximumOpenCredit double,Bankruptcies double,TaxLiens double) clustered by (loanid) into 2 buckets stored as orc TBLPROPERTIES('transactional'='true');
+INSERT into table rty  VALUES ('6cf51492-02a2-423e-b93d-676f05b9ad53', '7c202b37-2add-44e8-9aea-d5b119aea935', 'Charged Off', 12232, 'Short Term', 7280, '< 1 year', 'Rent', 46643, 'Debt Consolidation', 777.39, 18, '10', 12, 0, 6762, 7946, 0, 0)
+
+insert into table testTablesqNew values (1,'row1'),(2,'row2'),(3,'row3');
+update rty set LoanStatus = 'updateRow2' where CurrentLoanAmount = 12232;
+delete from testTableNew where id = 1;
+select  * from rty
+
+ALTER TABLE product SET TBLPROPERTIES ('transactional'='true');
+
+set hive.enforce.bucketing = true;
+create table abc as select * from workorder
+select * from abc
+
+create database HR
+
+select count(*) from hr_analytics
+
+INSERT OVERWRITE TABLE abc 
+SELECT [other Things], CASE WHEN id=206 THEN 'florida' ELSE location END AS location, [other Other Things] 
+FROM _tableName_ WHERE [_whereClause_];
+
+select * from testtable

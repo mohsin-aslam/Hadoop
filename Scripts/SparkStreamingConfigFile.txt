@@ -1,0 +1,17 @@
+tier1.sources  = source1
+tier1.channels = channel1
+tier1.sinks = avroSink
+
+tier1.sinks.avroSink.type = avro
+tier1.sinks.avroSink.channel = channel1
+tier1.sinks.avroSink.hostname = quickstart.cloudera
+tier1.sinks.avroSink.port = 33333
+
+
+
+tier1.sources.source1.type     = netcat
+tier1.sources.source1.bind     = 127.0.0.1
+tier1.sources.source1.port     = 9999
+tier1.sources.source1.channels = channel1
+tier1.channels.channel1.type   = memory
+tier1.channels.channel1.capacity = 100

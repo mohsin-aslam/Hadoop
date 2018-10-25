@@ -1,0 +1,8 @@
+Flume : distributed, reliable, and available system for efficiently collecting, aggregating and moving large amounts of log data from many different sources to a centralized data store.
+data sources are customizable, Flume can be used to transport massive quantities of event data including but not limited to network traffic data, social-media-generated data, email messages and pretty much any data source possible.
+
+Features:
+Flume ingests log data from multiple web servers into a centralized store (HDFS, HBase) efficiently.
+Using Flume, we can get the data from multiple servers immediately into Hadoop.
+Flume supports multi-hop flows, fan-in fan-out flows, contextual routing, etc.
+Flume can be scaled horizontally.

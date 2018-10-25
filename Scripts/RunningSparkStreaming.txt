@@ -1,0 +1,5 @@
+telnet localhost 9999
+
+
+
+spark-submit --master local[2] /home/cloudera/Desktop/sparkStreamingListener.py quickstart.cloudera 33333
